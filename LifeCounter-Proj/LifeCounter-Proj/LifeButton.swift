@@ -9,17 +9,15 @@ import SwiftUI
 
 struct LifeButton: View {
     let text: String
-    let action: () -> Void
+    let color: Color
     
     var body: some View {
-        Button(action: action) {
-            Text(text)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .frame(width: 50, height: 50)
-                .background(text.contains("+") ? Color.green : Color.red)
-                .cornerRadius(10)
-        }
+        Text(text)
+            .font(.title)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .frame(width: 40, height: 40)
+            .background(color)
+            .cornerRadius(10)
     }
 }
